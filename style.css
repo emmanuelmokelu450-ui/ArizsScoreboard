@@ -1,0 +1,233 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #0f172a;
+    color: #f1f5f9;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.scoreboard {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 55px 7% 40px;
+    text-align: center;
+}
+
+.page-header {
+    margin-bottom: 50px;
+}
+
+.page-header h1 {
+    margin: 0;
+    color: #f8fafc;
+    font-size: clamp(28px, 4vw, 56px);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.page-header p {
+    margin: 12px 0 0;
+    color: #94a3b8;
+    font-size: clamp(15px, 2vw, 28px);
+}
+
+.teams-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6%;
+    align-items: stretch;
+}
+
+.team-card {
+    min-width: 0;
+    padding: 32px 9% 40px;
+    background-color: #1e293b;
+    border: 2px solid #334155;
+    border-radius: 30px;
+}
+
+.team-card h2 {
+    margin: 0 0 28px;
+    color: #e2e8f0;
+    font-size: clamp(22px, 3vw, 40px);
+    font-weight: 700;
+}
+
+.score {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 180px;
+    margin-bottom: 48px;
+    background-color: #020617;
+    border-radius: 22px;
+    color: #f87171;
+    font-size: clamp(70px, 9vw, 120px);
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.buttons button {
+    min-width: 0;
+    min-height: 85px;
+    padding: 12px 5px;
+    background-color: #4f46e5;
+    color: #ffffff;
+    border: none;
+    border-radius: 18px;
+    font-family: inherit;
+    font-size: clamp(20px, 3vw, 36px);
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.buttons button:hover {
+    background-color: #6366f1;
+}
+
+.buttons button:active {
+    transform: scale(0.96);
+}
+
+.buttons button:focus-visible,
+#reset-button:focus-visible {
+    outline: 3px solid #c4b5fd;
+    outline-offset: 4px;
+}
+
+#reset-button {
+    display: block;
+    min-width: 230px;
+    min-height: 80px;
+    margin: 55px auto 0;
+    padding: 16px 35px;
+    background-color: #ef4444;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    font-family: inherit;
+    font-size: 30px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+#reset-button:hover {
+    background-color: #dc2626;
+}
+
+#reset-button:active {
+    transform: scale(0.97);
+}
+
+@media (max-width: 800px) {
+    .scoreboard {
+        padding: 40px 4% 30px;}
+
+    .page-header {
+        margin-bottom: 35px;
+    }
+
+    .teams-container {
+        gap: 20px;
+    }
+
+    .team-card {
+        padding: 25px 6% 30px;
+        border-radius: 22px;
+    }
+
+    .team-card h2 {
+        margin-bottom: 22px;
+    }
+
+    .score {
+        min-height: 140px;
+        margin-bottom: 30px;
+        border-radius: 16px;
+    }
+
+    .buttons {
+        gap: 8px;
+    }
+
+    .buttons button {
+        min-height: 65px;
+        border-radius: 12px;
+    }
+
+    #reset-button {
+        margin-top: 35px;
+        min-width: 180px;
+        min-height: 65px;
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 520px) {
+    .scoreboard {
+        padding: 35px 5% 30px;
+    }
+
+    .page-header {
+        margin-bottom: 28px;
+    }
+
+    .page-header h1 {
+        font-size: 27px;
+    }
+
+    .page-header p {
+        font-size: 15px;
+    }
+
+    .teams-container {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .team-card {
+        padding: 25px 7% 28px;
+    }
+
+    .team-card h2 {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+    .score {
+        min-height: 130px;
+        margin-bottom: 25px;
+        font-size: 80px;
+    }
+
+    .buttons {
+        gap: 10px;
+    }
+
+    .buttons button {
+        min-height: 60px;
+        font-size: 24px;
+    }
+
+    #reset-button {
+        width: 100%;
+        max-width: 230px;
+        min-height: 60px;
+        margin-top: 28px;
+        font-size: 23px;
+    }
+}
